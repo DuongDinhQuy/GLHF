@@ -1,0 +1,38 @@
+﻿<Window x:Class="KTPMUD.IncomeAndExpense"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KTPMUD"
+        mc:Ignorable="d"
+        Title="IncomeAndExpense" Height="600" Width="360">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Thêm Thu/Chi" FontWeight="Bold" FontSize="20" Margin="0,10,0,20" HorizontalAlignment="Center"/>
+            <!-- Ô Thêm Số Tiền -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Số Tiền:" Margin="0,0,10,0" Width="60"/>
+                <TextBox x:Name="txtAmount" Width="150"/>
+            </StackPanel>
+
+            <!-- Mục Chọn Category -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Category:" Margin="0,0,10,0" Width="60"/>
+                <ComboBox x:Name="cmbCategory" Width="150"/>
+                <!-- Các mục trong ComboBox có thể được động cập nhật từ code-behind. -->
+            </StackPanel>
+
+            <!-- Mục Chọn Thời Gian -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Thời Gian:" Margin="0,0,10,0" Width="60"/>
+                <DatePicker x:Name="dpTime" Width="150"/>
+            </StackPanel>
+
+            <!-- Nút Thêm Thu/Chi -->
+            <Button Content="Thêm Thu/Chi" Click="btnAdd_Click" Width="150" Height="30" Margin="0,20,0,10"/>
+
+            <!-- Nút Lưu Thông Tin -->
+            <Button Content="Lưu Thông Tin" Click="btnSave_Click" Width="150" Height="30"/>
+        </StackPanel>
+    </Grid>
+</Window>
