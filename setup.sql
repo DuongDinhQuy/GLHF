@@ -10,7 +10,7 @@ go
 create table Users
 ( Acc nvarchar(50) primary key
 , Pass nvarchar(50)
-, Username nvarchar(50)
+, UserName nvarchar(50)
 , Age int
 , Gender nvarchar(50) 
 )
@@ -24,7 +24,7 @@ insert into Users values ('trang.ntt210850', 'trangntt', N'Nguyễn Thị Thu Tr
 
 create table Category
 ( ID int primary key identity(1, 1)
-, Categoryname nvarchar(50) 
+, CategoryName nvarchar(50) 
 )
 go
 
@@ -38,3 +38,12 @@ insert into Category values (N'Thu nhập')
 insert into Category values (N'Phụ cấp')
 insert into Category values (N'Tiền thưởng')
 insert into Category values (N'Thu nợ')
+
+create table IncomeExpense
+( ID int primary key identity(1, 1)
+, UsersAcc nvarchar(50) foreign key references Users(Acc)
+, Amount int
+, CategoryId int foreign key references Category(ID)
+, IEDate datetime
+)
+go
