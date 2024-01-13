@@ -55,6 +55,7 @@
     <Compile Include="IncomeAndExpense.xaml.cs">
       <DependentUpon>IncomeAndExpense.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IncomeExpense.cs" />
     <Compile Include="Users.cs" />
     <Compile Include="Provider.cs" />
     <Page Include="HomeWindow.xaml">

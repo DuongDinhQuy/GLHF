@@ -19,6 +19,9 @@ namespace KTPMUD
             // Mở cửa sổ IncomeAndExpense
             IncomeAndExpense incomeAndExpenseWindow = new IncomeAndExpense();
             incomeAndExpenseWindow.Show();
+            // Đóng cửa sổ đăng nhập
+            Close();
+
         }
 
         private void btnList_Click(object sender, RoutedEventArgs e)

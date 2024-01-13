@@ -29,6 +29,7 @@ namespace KTPMUD
         {
             InitializeComponent();
         }
+        internal static Users currentUser;
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             // Xác thực đăng nhập
@@ -59,7 +60,10 @@ namespace KTPMUD
             foreach (var usr in NguoiDung)
             {
                 if (usr.Acc == username && usr.Pass == password)
+                {
+                    currentUser = usr;
                     return true;
+                }
             }
             return false;
         }

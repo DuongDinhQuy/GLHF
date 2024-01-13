@@ -10,7 +10,7 @@ namespace KTPMUD
     {
         public string Acc { get; set; }
         public string Pass { get; set; }
-        public string Username { get; set; }
+        public string UserName { get; set; }
         public int Age { get; set; }
         public string Gender { get; set; }
 

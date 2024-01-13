@@ -17,7 +17,7 @@
 
             <!-- Mục Chọn Category -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Category:" Margin="0,0,10,0" Width="60"/>
+                <TextBlock Text="Danh mục:" Margin="0,0,10,0" Width="60"/>
                 <ComboBox x:Name="cmbCategory" Width="150"/>
                 <!-- Các mục trong ComboBox có thể được động cập nhật từ code-behind. -->
             </StackPanel>
