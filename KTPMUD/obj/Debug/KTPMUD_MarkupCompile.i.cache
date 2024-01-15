@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-4-1609555491
+5-461351781
 
-1242902934
+141374956262
 13-1310406943
-HomeWindow.xaml;IncomeAndExpense.xaml;LoginWindow.xaml;MainWindow.xaml;
+HomeWindow.xaml;IncomeAndExpense.xaml;ListWindow.xaml;LoginWindow.xaml;UserInfo.xaml;
 
 True
 

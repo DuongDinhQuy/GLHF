@@ -13,7 +13,6 @@ namespace Models
         string _connString;
         SqlConnection _conn;
         public Provider(string connectionString) { ConnectionString = connectionString; }
-        //public Provider() : this(@"Data Source=.\SQLEXPRESS;Initial Catalog=Contact;Integrated Security=True") { }
         public Provider() : this(@"Data Source=.\SQLEXPRESS;Initial Catalog=GLHF;Integrated Security=True") { }
 
         public string ConnectionString

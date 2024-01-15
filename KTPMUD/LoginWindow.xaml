@@ -10,20 +10,13 @@
         <StackPanel Margin="20">
             <TextBlock Text="Đăng nhập" FontWeight="Bold" FontSize="20" Margin="0,10,0,20" HorizontalAlignment="Center"/>
 
-            <!-- Tài khoản -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Tài khoản:" Margin="0,0,10,0"/>
-                <TextBox x:Name="txtUsername" Width="200"/>
-            </StackPanel>
+            <TextBlock Text="Tài khoản:" Height="24"/>
+            <TextBox x:Name="txtUsername" Margin="0,0,0,10" Height="24"/>
 
-            <!-- Mật khẩu -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-                <TextBlock Text="Mật khẩu:" Margin="0,0,10,0"/>
-                <PasswordBox x:Name="txtPassword" Width="200"/>
-            </StackPanel>
-
-            <!-- Nút Đăng nhập -->
-            <Button Content="Đăng nhập" Click="btnLogin_Click" Width="150" Height="30"/>
+            <TextBlock Text="Mật khẩu:" Height="24"/>
+            <PasswordBox x:Name="txtPassword" Margin="0,0,0,10" Height="24"/>
+            
+            <Button Content="Đăng nhập" Click="btnLogin_Click" Width="150" Height="30" Margin="0,20,0,0"/>
         </StackPanel>
     </Grid>
 </Window>

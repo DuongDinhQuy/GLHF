@@ -2,10 +2,8 @@ D:\KTPMUD\KTPMUD\KTPMUD\bin\Debug\KTPMUD.exe.config
 D:\KTPMUD\KTPMUD\KTPMUD\bin\Debug\KTPMUD.exe
 D:\KTPMUD\KTPMUD\KTPMUD\bin\Debug\KTPMUD.pdb
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\KTPMUD.csproj.AssemblyReference.cache
-D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\MainWindow.baml
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\HomeWindow.g.cs
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\LoginWindow.g.cs
-D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\MainWindow.g.cs
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\KTPMUD_MarkupCompile.cache
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\KTPMUD_MarkupCompile.lref
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\HomeWindow.baml
@@ -18,3 +16,7 @@ D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\KTPMUD.exe
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\KTPMUD.pdb
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\IncomeAndExpense.g.cs
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\IncomeAndExpense.baml
+D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\ListWindow.g.cs
+D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\ListWindow.baml
+D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\UserInfo.g.cs
+D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\UserInfo.baml

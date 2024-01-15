@@ -27,39 +27,42 @@ namespace KTPMUD
             UpdateCategoryComboBox();
         }
 
-        internal Users curr;
-
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-
-                decimal amount = decimal.Parse(txtAmount.Text);
-                int savedCategoryId = (int)cmbCategory.SelectedValue;
-                DateTime time = dpTime.SelectedDate ?? DateTime.Now;
-
             
+            try
+            {
+
+            decimal amount = decimal.Parse(txtAmount.Text);
+
+            if (cmbCategory.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn một danh mục.");
+                return; // Dừng hàm nếu danh mục là null
+            }
+            int savedCategoryId = (int)cmbCategory.SelectedValue;
+
+            DateTime time = dpTime.SelectedDate ?? DateTime.Now;
 
             if (new Models.Provider().Execute($"INSERT INTO {typeof(IncomeExpense).Name} values ({LoginWindow.currentUser.Acc}, {amount}, {savedCategoryId}, '{time.ToString("yyyy-MM-dd HH:mm:ss")}')"))
             {
-                // Thông báo thành công (hoặc thực hiện các hành động khác)
                 MessageBox.Show("Thêm thu/chi thành công!");
             }
             else
             {
                 MessageBox.Show("Thêm thu/chi không thành công.");
             }
-
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Số tiền không hợp lệ.");
+            }
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
-            // Đóng cửa sổ
-            Hide();
-
-            //Mở cửa sổ chính
-            HomeWindow Window = new HomeWindow();
-            Window.Show();
-
+            new HomeWindow().Show();
+            Close();
         }
 
         private void UpdateCategoryComboBox()
