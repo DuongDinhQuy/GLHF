@@ -39,6 +39,8 @@ namespace KTPMUD
             //            totalAmounts[i] += ie.Amount;
             //    }
             //}
+            new ReportWindow().Show();
+            Close();
         }
 
         private void btnAccount_Click(object sender, RoutedEventArgs e)
