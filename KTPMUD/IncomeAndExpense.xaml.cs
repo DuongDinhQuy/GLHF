@@ -68,6 +68,7 @@ namespace KTPMUD
         private void UpdateCategoryComboBox()
         {
             List<Category> dbContext = new Models.Provider().Select<Category>($"SELECT * FROM {typeof(Category).Name};");
+
                 {
 
                 // Gán danh sách Category cho ComboBox

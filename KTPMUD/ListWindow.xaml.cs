@@ -30,23 +30,29 @@ namespace KTPMUD
         {
             try
             {
-                // Check if a user is logged in
+                // Kiểm tra xem người dùng đã đăng nhập hay chưa.
                 if (LoginWindow.currentUser == null)
                 {
-                    MessageBox.Show("No user is currently logged in.");
+                    MessageBox.Show("Hiện không có người dùng nào đã đăng nhập.");
                     return;
                 }
 
-                // Load the list of IncomeExpense for the current user
+                // Tải danh sách Thu/Chi cho người dùng hiện tại.
                 List<IncomeExpenseView> incomeExpenses = new Provider().Select<IncomeExpenseView>($"SELECT * FROM {typeof(IncomeExpenseView).Name} WHERE UsersAcc = '{LoginWindow.currentUser.Acc}';");
 
-                // Display the data in the DataGrid
+                // Hiển thị dữ liệu trong DataGrid.
                 dataGrid.ItemsSource = incomeExpenses;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while loading income/expense list: {ex.Message}");
+                MessageBox.Show($"Có lỗi xảy ra trong quá trình tải danh sách thu/chi: {ex.Message}");
             }
+        }
+
+        private void btnCLose_Click(object sender, RoutedEventArgs e)
+        {
+            new HomeWindow().Show();
+            Close();
         }
     }
 }

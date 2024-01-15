@@ -7,13 +7,15 @@
         mc:Ignorable="d"
         Title="ListWindow" Height="600" Width="360">
     <Grid>
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="20">
+        <TextBlock Text="Thống kê" FontWeight="Bold" FontSize="20" Margin="0,10,0,20" HorizontalAlignment="Center"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10,50,10,50">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="30"/>
-                <DataGridTextColumn Header="Số Tiền" Binding="{Binding Amount}" Width="80"/>
+                <DataGridTextColumn Header="Số Tiền" Binding="{Binding Amount}" Width="60"/>
                 <DataGridTextColumn Header="Danh Mục" Binding="{Binding CategoryName}" Width="80"/>
                 <DataGridTextColumn Header="Ngày" Binding="{Binding IEDate}" Width="130"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="Thoát" Click="btnCLose_Click" Width="150" Height="30" Margin="90,520,90,10"/>
     </Grid>
 </Window>
