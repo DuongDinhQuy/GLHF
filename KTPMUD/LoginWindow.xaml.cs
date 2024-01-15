@@ -39,13 +39,10 @@ namespace KTPMUD
             // Kiểm tra xác nhận đăng nhập
             if (CheckLogin(username, password))
             {
-                // Nếu đăng nhập thành công có thể chuyển đến cửa sổ chính
                 MessageBox.Show("Đăng nhập thành công"); 
-                //Mở cửa sổ chính
-                HomeWindow Window = new HomeWindow();
-                Window.Show();
 
-                // Đóng cửa sổ đăng nhập
+                new HomeWindow().Show();
+
                 Close();
             }
             else

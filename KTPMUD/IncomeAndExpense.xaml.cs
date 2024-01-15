@@ -33,25 +33,25 @@ namespace KTPMUD
             try
             {
 
-            decimal amount = decimal.Parse(txtAmount.Text);
+                decimal amount = decimal.Parse(txtAmount.Text);
 
-            if (cmbCategory.SelectedValue == null)
-            {
-                MessageBox.Show("Vui lòng chọn một danh mục.");
-                return; // Dừng hàm nếu danh mục là null
-            }
-            int savedCategoryId = (int)cmbCategory.SelectedValue;
+                if (cmbCategory.SelectedValue == null)
+                {
+                    MessageBox.Show("Vui lòng chọn một danh mục.");
+                    return; // Dừng hàm nếu danh mục là null
+                }
+                int savedCategoryId = (int)cmbCategory.SelectedValue;
 
-            DateTime time = dpTime.SelectedDate ?? DateTime.Now;
+                DateTime time = dpTime.SelectedDate ?? DateTime.Now;
 
-            if (new Models.Provider().Execute($"INSERT INTO {typeof(IncomeExpense).Name} values ({LoginWindow.currentUser.Acc}, {amount}, {savedCategoryId}, '{time.ToString("yyyy-MM-dd HH:mm:ss")}')"))
-            {
-                MessageBox.Show("Thêm thu/chi thành công!");
-            }
-            else
-            {
-                MessageBox.Show("Thêm thu/chi không thành công.");
-            }
+                if (new Models.Provider().Execute($"INSERT INTO {typeof(IncomeExpense).Name} values ('{LoginWindow.currentUser.Acc}', {amount}, {savedCategoryId}, '{time.ToString("yyyy-MM-dd HH:mm:ss")}')"))
+                {
+                    MessageBox.Show("Thêm thu/chi thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thu/chi không thành công.");
+                }
             }
             catch (FormatException)
             {

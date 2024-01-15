@@ -25,31 +25,28 @@ namespace KTPMUD
             InitializeComponent();
             LoadData();
         }
+
         private void LoadData()
         {
-            // Lấy danh sách thu chi của tài khoản đã đăng nhập
-            List<IncomeExpenseView> incomeExpenses = new Provider().Select<IncomeExpenseView>($"SELECT * FROM {typeof(IncomeExpenseView).Name};");
+            try
+            {
+                // Check if a user is logged in
+                if (LoginWindow.currentUser == null)
+                {
+                    MessageBox.Show("No user is currently logged in.");
+                    return;
+                }
 
-            //int[] ids = new int[] { 1, 2, 4, 5};
-            //int[] totalAmounts = new int[] { 0, 0, 0, 0};
+                // Load the list of IncomeExpense for the current user
+                List<IncomeExpenseView> incomeExpenses = new Provider().Select<IncomeExpenseView>($"SELECT * FROM {typeof(IncomeExpenseView).Name} WHERE UsersAcc = '{LoginWindow.currentUser.Acc}';");
 
-            //for (int i =0; i<ids.Length;i++)
-            //{
-            //    foreach (var ie in incomeExpenses)
-            //    {
-            //        if (ie.CategoryId == ids[i])
-            //            totalAmounts[i] += ie.Amount;
-            //    }
-            //}
-
-            /*
-             * int arr[] = {1, 2, 3, 4, 5};
-             * for(auto x : arr)
-             *     cout << x << endl;
-             */
-
-            // Hiển thị dữ liệu trong DataGrid
-            dataGrid.ItemsSource = incomeExpenses;
+                // Display the data in the DataGrid
+                dataGrid.ItemsSource = incomeExpenses;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading income/expense list: {ex.Message}");
+            }
         }
     }
 }
