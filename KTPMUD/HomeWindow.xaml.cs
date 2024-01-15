@@ -46,5 +46,11 @@ namespace KTPMUD
             new UserInfo().Show();
             Close();
         }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            new LoginWindow().Show();
+            Close();
+        }
     }
 }

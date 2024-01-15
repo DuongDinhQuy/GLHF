@@ -20,3 +20,5 @@ D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\ListWindow.g.cs
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\ListWindow.baml
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\UserInfo.g.cs
 D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\UserInfo.baml
+D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\SignupWindow.g.cs
+D:\KTPMUD\KTPMUD\KTPMUD\obj\Debug\SignupWindow.baml

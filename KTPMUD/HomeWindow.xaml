@@ -10,17 +10,15 @@
         <StackPanel Margin="20" Background="White">
             <TextBlock Text="Ứng dụng Quản lý chi tiêu" FontWeight="Bold" FontSize="20" Margin="0,10,0,20" HorizontalAlignment="Center"/>
             
-            <!-- Nút 1 -->
             <Button Content="Tạo Thu/Chi" Click="btnIncomeAndExpense_Click" Width="200" Height="60" Margin="0,0,0,20" Background="LightGray"/>
 
-            <!-- Nút 2 -->
             <Button Content="Thống kê" Click="btnList_Click" Width="200" Height="60" Margin="0,0,0,20" Background="LightGray"/>
 
-            <!-- Nút 3 -->
             <Button Content="Báo cáo" Click="btnReport_Click" Width="200" Height="60" Margin="0,0,0,20" Background="LightGray"/>
 
-            <!-- Nút 4 -->
-            <Button Content="Tài khoản" Click="btnAccount_Click" Width="200" Height="60"  Background="LightGray"/>
+            <Button Content="Tài khoản" Click="btnAccount_Click" Width="200" Height="60" Margin="0,0,0,20"  Background="LightGray"/>
+
+            <Button Content="Đăng xuất" Click="btnLogout_Click" Width="200" Height="60"  Background="LightGray"/>
         </StackPanel>
     </Grid>
 

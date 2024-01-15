@@ -64,5 +64,10 @@ namespace KTPMUD
             }
             return false;
         }
+
+        private void btnSignup_Click(object sender, RoutedEventArgs e)
+        {
+            new SignupWindow().Show();
+        }
     }
 }
